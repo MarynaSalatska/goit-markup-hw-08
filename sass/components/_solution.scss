@@ -18,7 +18,8 @@
     background-image: linear-gradient(to right, #2f303a66 0%, #2f303a66 100%),
       url('../images/mob/heder-mob-img@2x.jpg');
   }
-  @media screen and (min-width: 480px) and (max-width: 767px) {
+
+  @include tablet {
     background-image: linear-gradient(to right, #2f303a66 0%, #2f303a66 100%),
       url('../images/tablet/header-img-min.jpg');
     @media (min-device-pixel-ratio: 2),
@@ -28,7 +29,9 @@
         url('../images/tablet/header-img@2x-min.jpg');
     }
   }
-  @media screen and (min-width: 768px) {
+  @include desktop {
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-image: linear-gradient(to right, #2f303a66 0%, #2f303a66 100%),
       url('../images/desktop/heder-desktop.jpg');
     @media (min-device-pixel-ratio: 2),
@@ -37,25 +40,6 @@
       background-image: linear-gradient(to right, #2f303a66 0%, #2f303a66 100%),
         url('../images/desktop/heder-desktop@2x.jpg');
     }
-  }
-
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  max-width: 1600px;
-  margin: 0 auto;
-
-  background-color: $solution-color;
-
-  padding-top: 118px;
-  padding-bottom: 118px;
-
-  @include tablet {
-  }
-  @include desktop {
-    padding-top: 200px;
-    padding-bottom: 200px;
   }
 
   & .container {
