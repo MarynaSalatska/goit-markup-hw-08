@@ -1,0 +1,195 @@
+.footer {
+  background: $solution-color;
+  padding-bottom: 60px;
+  padding-top: 60px;
+
+  & .studio {
+    display: inline-block;
+    text-decoration: none;
+    color: $primary-body-color;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.19;
+    font-style: normal;
+    margin-bottom: 20px;
+    padding: 0;
+
+    @include tablet {
+      font-size: 24px;
+      padding: 0;
+    }
+    @include desktop {
+      font-size: 26px;
+      padding: 0;
+      // padding-bottom: 60px;
+      // padding-top: 60px;
+    }
+  }
+
+  &__items li:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &__items li {
+    display: block;
+    min-width: 232px;
+    @include tablet {
+      min-width: 232px;
+    }
+    @include desktop {
+      min-width: 206px;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    line-height: 1.71;
+    font-style: normal;
+    color: $footer-color;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__link:hover,
+  &__link:focus,
+  &__link:active {
+    color: $decoration-text-color;
+  }
+  &__address {
+    text-decoration: none;
+    font-style: normal;
+    line-height: 1.71;
+    color: $primary-body-color;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__address:hover,
+  &__address:focus {
+    color: $decoration-text-color;
+  }
+  & .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include tablet {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: baseline;
+      align-items: center;
+      justify-content: center;
+    }
+    @include desktop {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      align-items: baseline;
+    }
+  }
+  &__main {
+    text-align: center;
+    margin-bottom: 60px;
+    margin-right: 0px;
+    @include tablet {
+      text-align: center;
+      margin-bottom: 60px;
+      margin-right: 165px;
+    }
+    @include desktop {
+      text-align: left;
+      display: block;
+      margin-right: 0px;
+      margin-bottom: 0;
+    }
+  }
+  &__tablet {
+    display: block;
+      align-items: baseline;
+    @include tablet {
+      display: inline-flex;
+      
+    }
+    @include desktop {
+      display: inline-flex;
+      align-items: baseline;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $primary-body-color;
+    font-size: 14px;
+    margin-bottom: 20px;
+    @include desktop {
+      // display: inline;
+      // text-align: left;
+    }
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 206px;
+    // height: 80px;
+    margin-bottom: 60px;
+    // gap: 10px;
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 206px;
+      height: 80px;
+      margin-bottom: 60px;
+    }
+    @include desktop {
+      text-align: left;
+      display: block;
+      margin-right: 0px;
+      margin-bottom: 0;
+      max-width: 206px;
+      height: 80px;
+      margin-left: 70px;
+    }
+  }
+  & .social-link {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    fill: $primary-body-color;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      background-color: $decoration-text-color;
+      color: $primary-body-color;
+    }
+  }
+}
+
+.social-list-end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  & .social-icon {
+    @include calc(4, 10px);
+  }
+}

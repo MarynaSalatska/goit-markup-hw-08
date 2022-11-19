@@ -1,0 +1,111 @@
+.solution {
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('/images/mob/heder-mob-img.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 1600px;
+  margin: 0 auto;
+
+  background-color: $solution-color;
+
+  padding-top: 118px;
+  padding-bottom: 118px;
+
+  @include tablet {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('/images/tablet/header-img-min.jpg');
+    @include retina {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('/images/tablet/header-img@2x-min.jpg');
+    }
+  }
+  @include desktop {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url('/images/desktop/heder-desktop.jpg');
+    @include retina {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url('/images/desktop/heder-desktop@2x.jpg');
+    }
+  }
+
+  & .container {
+    text-align: center;
+  }
+  &-title {
+    max-width: 360px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    font-family: inherit;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $primary-body-color;
+
+    @include tablet {
+    }
+    @include desktop {
+      max-width: 696px;
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
+
+  &-button {
+    display: inline-block;
+    min-width: 216px;
+    border-radius: 4px;
+    padding: 10px 32px;
+
+    color: $primary-body-color;
+    background-color: $decoration-text-color;
+
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid transparent;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      background-color: $solution-button-color;
+      cursor: pointer;
+    }
+  }
+}
+
+@include tablet {
+}
+@include desktop {
+}
