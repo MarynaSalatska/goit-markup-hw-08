@@ -87,6 +87,7 @@
 ul.list {
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
 
   @include tablet {
     gap: 30px;
@@ -101,8 +102,7 @@ ul.list {
 }
 
 .feature .list li {
-  text-align: left;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
 
   @include tablet {
     text-align: left;

@@ -105,6 +105,11 @@ header {
   border-bottom: 1px solid #ececec;
 }
 
+header > .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 @media screen and (min-width: 480px) {
   header > .container {
     display: -webkit-box;
@@ -542,6 +547,7 @@ ul.list {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 30px;
 }
 @media screen and (min-width: 768px) {
   ul.list {
@@ -564,10 +570,6 @@ ul.list {
   }
 }
 
-.feature .list li {
-  text-align: left;
-  margin-bottom: 30px;
-}
 @media screen and (min-width: 768px) {
   .feature .list li {
     text-align: left;
@@ -768,7 +770,6 @@ ul.list {
 }
 
 .page {
-  max-width: 199px;
   display: none;
 }
 @media screen and (min-width: 480px) {
