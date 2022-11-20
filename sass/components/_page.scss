@@ -1,5 +1,6 @@
 .page {
-
+  max-width: 199px;
+  display: none;
   @include mobile {
     overflow: hidden;
     display: none;
@@ -49,7 +50,3 @@
     position: relative;
   }
 }
-
-
-
-

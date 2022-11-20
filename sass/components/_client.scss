@@ -28,7 +28,7 @@
   }
   &__link {
     display: inline-flex;
-    width: 170px;
+    width: 210px;
     height: 92px;
     align-items: center;
     justify-content: center;
@@ -39,6 +39,13 @@
     transition-property: border-radius, border;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include tablet {
+      width: 226px;
+    }
+    @include desktop {
+      width: 170px;
+    }
   }
   &__link:hover,
   &__link:focus {

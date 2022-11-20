@@ -85,7 +85,7 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
   .container {
     width: 480px;
   }
@@ -105,7 +105,7 @@ header {
   border-bottom: 1px solid #ececec;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
   header > .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -121,6 +121,12 @@ header {
     height: 80px;
   }
 }
+@media screen and (min-width: 1200px) {
+  header > .container {
+    display: block;
+  }
+}
+
 .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,6 +151,7 @@ header {
 @media screen and (min-width: 1200px) {
   .nav-list {
     gap: 53px;
+    margin-right: auto;
   }
 }
 .nav-list li:not(:last-child) {
@@ -201,9 +208,9 @@ header {
 }
 @media screen and (min-width: 1200px) {
   .nav-list.auth {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -214,10 +221,8 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-right: auto;
+    margin-right: 4px;
+    gap: 10px;
   }
 }
 
@@ -267,6 +272,16 @@ header {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .link.contact {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .link.contact {
+    font-size: 14px;
+  }
 }
 .link.contact > .icon {
   margin-right: 10px;
@@ -490,12 +505,6 @@ li .link:focus {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 30px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .list__icon {
-    margin-bottom: 30px;
   }
 }
 .list__title {
@@ -562,27 +571,32 @@ ul.list {
 @media screen and (min-width: 768px) {
   .feature .list li {
     text-align: left;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .feature .list li {
     text-align: left;
+    margin-bottom: 0;
   }
 }
 
 .team {
   background-color: #f5f4fa;
+  padding-top: 60px;
   padding-bottom: 60px;
 }
 @media screen and (min-width: 768px) {
   .team {
     background-color: #f5f4fa;
+    padding-top: 60px;
     padding-bottom: 60px;
   }
 }
 @media screen and (min-width: 1200px) {
   .team {
     background-color: #f5f4fa;
+    padding-top: 94px;
     padding-bottom: 94px;
   }
 }
@@ -753,7 +767,11 @@ ul.list {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (max-width: 480px) {
+.page {
+  max-width: 199px;
+  display: none;
+}
+@media screen and (min-width: 480px) {
   .page {
     overflow: hidden;
     display: none;
@@ -859,7 +877,7 @@ ul.list {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  width: 170px;
+  width: 210px;
   height: 92px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -876,6 +894,16 @@ ul.list {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .client__link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client__link {
+    width: 170px;
+  }
 }
 .client__link:hover, .client__link:focus {
   border: 1px solid #2196f3;
@@ -1959,7 +1987,8 @@ b {
 }
 
 .footer-input {
-  min-width: 450px;
+  width: 100%;
+  min-width: 290px;
   height: 50px;
   background: #2f303a;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -1969,6 +1998,11 @@ b {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
+}
+@media screen and (min-width: 480px) {
+  .footer-input {
+    min-width: 450px;
+  }
 }
 @media screen and (min-width: 768px) {
   .footer-input {

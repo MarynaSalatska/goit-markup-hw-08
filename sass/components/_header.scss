@@ -11,6 +11,7 @@ header > .container {
     height: 80px;
   }
   @include desktop {
+    display: block;
   }
 }
 
@@ -29,6 +30,7 @@ header > .container {
     }
     @include desktop {
       gap: 53px;
+      margin-right: auto;
     }
   }
   &-list li:not(:last-child) {
@@ -69,12 +71,13 @@ header > .container {
       // margin-left: 87px;
     }
     @include desktop {
-      display: flex;
+      display: inline-flex;
       flex-direction: row;
       align-items: baseline;
       align-items: center;
-      justify-content: center;
-      margin-right: auto;
+      margin-right: 4px;
+      gap: 10px;
+      // justify-content: space-between;
     }
   }
 }
@@ -115,6 +118,13 @@ header > .container {
   transition-property: fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include tablet {
+    font-size: 12px;
+  }
+  @include desktop {
+    font-size: 14px;
+  }
 
   & > .icon {
     margin-right: 10px;

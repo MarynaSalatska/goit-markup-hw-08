@@ -1,18 +1,18 @@
 .team {
   background-color: $accent-color;
-  // padding-top: 60px;
+  padding-top: 60px;
   padding-bottom: 60px;
 
   @include tablet {
     // text-align: center;
     background-color: $accent-color;
-    // padding-top: 60px;
+    padding-top: 60px;
     padding-bottom: 60px;
   }
   @include desktop {
     // text-align: center;
     background-color: $accent-color;
-    // padding-top: 94px;
+    padding-top: 94px;
     padding-bottom: 94px;
   }
 }
